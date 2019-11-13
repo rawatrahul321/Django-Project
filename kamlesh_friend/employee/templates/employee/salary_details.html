@@ -1,0 +1,63 @@
+{% extends 'employee/emp.html'%}
+{%load static%}
+
+{% block body%}
+<div class="container-fluid" style="background-color:#64677F;height:60px">
+    <div class="col-sm-4">
+        <h3 class="animated bounceInLeft" align="center" style="color:white;hight:40px;padding-top:10px">SALARY
+            DETAILS</h3>
+    </div>
+</div>
+<br>
+
+<div class="container">
+    <table class="table table-striped table-responsive">
+        <thead class="bg-dark" style="color:white;">
+        <tr>
+            <th>S NO.</th>
+            <th>Employee Name</th>
+            <th>Month Of Salary</th>
+            <th>Basic Salary</th>
+            <th>Work Days</th>
+            <th>Salary Total</th>
+            <th>Year Of Salary</th>
+            <th>Action</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            {%for data in data%}
+
+            <td>{{ forloop.counter }}</td>
+
+            <td>{{data.emp_name}}</td>
+            <td>{{data.mp}}</td>
+            <td>{{data.bs}}</td>
+            <td>{{data.working_days}}</td>
+            <td>{{data.total_salary}}</td>
+            <td>{{data.year_salary}}</td>
+
+            <td>
+                <div class="btn-group inline pull-left">
+
+                    <form action="/remove_items/" method="post">
+
+
+                        <a href="{% url 'empurl:view_salary' data.id %}">
+                            <button type="button" class="btn btn-info">Salary Slip</button>
+                        </a>
+
+                        <a href="{% url 'empurl:delete_data' data.id %}">
+                            <button type="button" class="btn btn-danger ">Delete</button>
+                        </a>
+                    </form>
+                </div>
+            </td>
+
+        </tr>
+        {%endfor%}
+        </tbody>
+    </table>
+</div>
+{%endblock%}

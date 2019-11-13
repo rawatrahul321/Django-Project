@@ -1,0 +1,313 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'employee/style.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'employee/animate.css' %}"/>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Employee</title>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light ">
+    <a class="navbar-brand" href="{% url 'homepageurl:homepage' %}"> <img class="img-fluid"
+                                                                          src="{% static 'homepage/images/logo.png' %}"
+                                                                          alt="My image"
+                                                                          style="width:30px"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'empurl:employee' %}"><img
+                        src="{% static 'homepage/images/homepage1.png' %}">Home <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'empurl:abouturl' %}"><img
+                        src="{% static 'homepage/images/about1.png' %}">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Account
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="{% url 'empurl:emp_details' %}"><img
+                            src="{% static 'homepage/images/login.png' %}">My Account</a>
+                    <a class="dropdown-item" href="{% url 'empurl:salary_details' %}"><img
+                            src="{% static 'homepage/images/login.png' %}">My Salary Report</a>
+                    <a class="dropdown-item" href="{% url 'empurl:change_password' %}"><img
+                            src="{% static 'homepage/images/login.png' %}">Change Password</a>
+
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'empurl:logout' %}">
+                    <img src="{% static 'employee/images/logout1.png' %}">logout</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#"></a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+    <b><i class="animated hinge" style="color:SlateBlue;font-family:verdana;font-size:120%;"><img class="animated hinge"
+                                                                                                  src="{% static 'homepage/images/logo4.png' %}">Payroll Management System</i></b>
+  </span>
+
+    </div>
+</nav>
+<br>
+<br>
+<br>
+{%block body%}
+<div>
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'homepage/images/c1.jpg' %}"
+                     alt="My image" width="100%" height="550px"
+                />
+                <div class="carousel-caption">
+                    <h3>LEAVE AND VACATION MANAGEMENT</h3>
+                    <p class="sansserif">Manage Employee Leaves and Vacations Management in a <em>Single Portal</em></p>
+                    <a href="{% url 'homepageurl:module_details' %}">
+                        <button type="button" class="btn">Read More</button>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'homepage/images/c2.jpg' %}"
+                     alt="My image" width="100%" height="550px"
+                />
+                <div class="carousel-caption">
+                    <h3>MANAGE THE EMPLOYEES PAYROLLS</h3>
+                    <p>A Complete Solution for payroll Management</p>
+                    <a href="{% url 'homepageurl:module_details' %}">
+                        <button type="button" class="btn">Read More</button>
+                    </a>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'homepage/images/c3new.jpg' %}"
+                     alt="My image" width="100%" height="550px"
+                />
+                <div class="carousel-caption">
+                    <h3>SALARY AND REIMBURESMENTS MANAGEMENT</h3>
+                    <p>Management Of Employee salary and Reimburesments</p>
+                    <a href="{% url 'homepageurl:module_details' %}">
+                        <button type="button" class="btn">Read More</button>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+    </div>
+
+</div>
+
+<div class="container-fluid" style="background-color:#64677F">
+    <marquee direction="right" style="text-align:center;color:lightgray;font-size:20px;">Welcome To Employee Management
+        System
+    </marquee>
+</div>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card w-80 h-36" style="width: 18rem;">
+                <img class="card-img-top" src="{% static 'homepage/images/pay1.jpg' %}" alt="Card image cap"
+                     style="hight:20px;">
+                <div class="card-body">
+                    <h5 style="font-size:17px" class="card-title">Employee Management System</h5>
+                    <p class="card-text" style="font-size:11px">EMS is a distributed application, developed to maintain
+                        the details of employees working in any organization.</p>
+                    <a href="{% url 'homepageurl:module_details' %}" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card w-80 h-40 " style="width: 18rem;">
+                <img class="card-img-top" src="{% static 'homepage/images/pay2.jpg' %}" alt="Card image cap"
+                     style="hight:100px;">
+                <div class="card-body">
+                    <h5 style="font-size:17px" class="card-title">User Management System</h5>
+                    <p class="card-text" style="font-size:12px"> User Management System implements user management and
+                        authentication, personal profiles management and classification.</p>
+                    <a href="{% url 'homepageurl:module_details' %}" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card w-80 h-40" style="width: 18rem;">
+                <img class="card-img-top" src="{% static 'homepage/images/pay3.jpg' %}" alt="Card image cap"
+                     style="hight:100px;">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size:17px">Salary Management System</h5>
+                    <p class="card-text" style="font-size:12px">The purpose of developing this software project is to
+                        fully automate salary system for an organization sweden sports academy</p>
+                    <a href="{% url 'homepageurl:module_details' %}" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+
+    <div class="row">
+
+
+        <div class="col-sm-5">
+            <img src="{% static 'homepage/images/payroll6.jpg' %}"
+                 alt="My image" width="425" height="280" class="img-thumbnail" style="float:right"
+            />
+
+
+        </div>
+        <div class="col-sm-6">
+            <div class="page-header">
+
+                <h1 style="font-size:25px;color:gray;" class="Monospace">
+                    About Payroll Management System
+                </h1>
+                <hr>
+            </div>
+
+            <p style="font-size:16px;color:gray"> Payroll is a method of administering employees' salaries in an
+                organization. The process consists of
+                calculation of employee salaries and tax deductions, administrating employee benefits and payment of
+                salaries. Payroll system can also be called as an accounts activity which commences the salary
+                administration of employees in the organization. Our Payroll Management System is fully integrated
+                with
+                accounts and give’s the benefits of simplified Payroll processing and accounting.</p>
+        </div>
+    </div>
+</div>
+{%endblock%}
+<hr>
+
+<footer>
+    <div class="row">
+        <div class="col-sm-6">
+            <b class="animated bounceInLeft" style="font-size:18px;color:#F2F1F7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONTACT
+                INFO:</b>&nbsp;
+            <p class="animated bounceInLeft" style="font-size:14px;color:#F2F1F7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                    src="{% static 'homepage/images/add1.png' %}">&nbsp;Address:New Ashok Nagar,Delhi</p>
+            <p class="animated bounceInLeft" style="font-size:14px;color:#F2F1F7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                    src="{% static 'homepage/images/city.png' %}">&nbsp;Main City:Delhi</p>
+            <p class="animated bounceInLeft" style="font-size:14px;color:#F2F1F7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                    src="{% static 'homepage/images/mobile.png' %}">&nbsp;Mobile No:9639830975</p>
+            <p class="animated bounceInLeft" style="font-size:14px;color:#F2F1F7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                    src="{% static 'homepage/images/phon.png' %}">&nbsp;Phon No:0122-2362458</p>
+            <p class="animated bounceInLeft" style="font-size:14px;color:#F2F1F7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                    src="{% static 'homepage/images/email3.png' %}">&nbsp;Email: <a style="color:white"
+                                                                                    href="mailto:deegariya007@gmail.com">deegariya007@gmail.com</a>
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <div id="map" style="width:200pxheight:250pxpx"></div>
+
+            <script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var myCenter = new google.maps.LatLng(28.5911307,77.3078392);
+  var mapOptions = {center: myCenter, zoom: 5};
+  var map = new google.maps.Map(mapCanvas,mapOptions);
+  var marker = new google.maps.Marker({
+    position: myCenter,
+    animation: google.maps.Animation.BOUNCE
+  });
+  marker.setMap(map);
+}
+
+
+
+
+
+
+
+
+            </script>
+
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8PG7PfjhaZVR6EEbEy4c95CHOdNTmjw4&callback=myMap"></script>
+        </div>
+    </div>
+
+</footer>
+<footer style="background-color:black">
+    <div class="row">
+
+
+        <div class="col-sm-3">
+            <p style="color:white;font-size:12px;padding-top:5px;padding-left:5px;">Major Project:MCA © 2018 All Rights
+                Reserved.
+
+            </p>
+        </div>
+        <div class="col-sm-3">
+            <ul style="list-style-type:none">
+                <li style="float:left;padding-top:7px">
+                    <p style="color:white;font-size:12px">Follow me on:</p>
+                </li>
+                <li style="float:left">
+                    <a href="https://www.facebook.com/deepak.gariya"> <img src="{% static 'homepage/images/fb1.png' %}"
+                                                                           style="hight:27px;width:27px;padding-top:5px;padding-left:5px"></a>
+
+                </li>
+                <li style="float:left">
+                    <a href="https://twitter.com/Deepakgariya1"> <img src="{% static 'homepage/images/twitter.png' %}"
+                                                                      style="hight:27px;width:27px;padding-top:5px;padding-left:5px"></a>
+
+                </li>
+                <li style="float:left">
+                    <a href="https://www.linkedin.com/in/deepak-gariya-3ab5b495
+"><img src="{% static 'homepage/images/linkedin.png' %}"
+       style="hight:27px;width:27px;padding-top:5px;padding-left:5px"></a>
+
+                </li>
+
+
+            </ul>
+        </div>
+
+    </div>
+</footer>
+</body>
+</html>

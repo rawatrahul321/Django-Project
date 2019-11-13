@@ -1,0 +1,106 @@
+{% extends 'payroll_admin/admin_about.html'%}
+{%load static%}
+
+{% block body%}
+
+<div class="container-fluid" style="background-color:#64677F;height:60px">
+    <div class="col-sm-4">
+        <h3 class="animated bounceInLeft" align="center" style="color:white;hight:40px;padding-top:10px">SALARY
+            REPORT</h3>
+    </div>
+</div>
+<br>
+
+<div class="container">
+    <table class="table table-striped table-responsive">
+        <thead class="bg-dark" style="color:white;">
+        <tr>
+            <th>S NO.</th>
+            <th>Employee Name</th>
+            <th>Month Salary</th>
+            <th>Basic Salary</th>
+            <th>Work Days</th>
+            <th>Salary Total</th>
+            <th>Salary Year</th>
+            <th>Time</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        {%for data in data1%}
+        <tr>
+
+            <td>{{forloop.counter}}</td>
+            <td>{{data.emp_name}}</td>
+            <td>{{data.mp}}</td>
+            <td>{{data.bs}}</td>
+            <td>{{data.working_days}}</td>
+            <td>{{data.total_salary}}</td>
+
+            <td>{{data.year_salary}}</td>
+            <td>{{data.added}}</td>
+            <td>
+                <div class="btn-group inline pull-left">
+                    <!--<button type="button" class="btn btn-info">Edit</button>-->
+                    <a href="{%url 'payrollurl:salaryedit' data.id data.user_name_id %}">
+                        <button type="button" class="btn btn-success">Salary Slip</button>
+                    </a>
+
+                    <a href="{%url 'payrollurl:salary_delete' data.id%}">
+                        <button type="button" class="btn btn-danger ">Delete</button>
+                    </a>
+                </div>
+            </td>
+        </tr>
+        {%endfor%}
+
+        </tbody>
+    </table>
+</div>
+<br>
+<br>
+<div class="container">
+    <table class="table table-striped table-responsive">
+        <thead class="bg-dark" style="color:white;">
+        <tr>
+            <th>S NO.</th>
+            <th>Admin Name</th>
+            <th>Month Salary</th>
+            <th>Basic Salary</th>
+            <th>Work Days</th>
+            <th>Salary Total</th>
+            <th>Salary Year</th>
+            <th>Time</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        {%for data in data2%}
+        <tr>
+
+            <td>{{forloop.counter}}</td>
+            <td>{{data.admin_name}}</td>
+            <td>{{data.mp}}</td>
+            <td>{{data.bs}}</td>
+            <td>{{data.working_days}}</td>
+            <td>{{data.total_salary}}</td>
+            <td>{{data.year_salary}}</td>
+            <td>{{data.added}}</td>
+            <td>
+                <div class="btn-group inline pull-left">
+                    <!--<button type="button" class="btn btn-info">Edit</button>-->
+                    <a href="{%url 'payrollurl:view_salary_admin' data.id %}">
+                        <button type="button" class="btn btn-success">Salary Slip</button>
+                    </a>
+
+                    <a href="{%url 'payrollurl:delete_salary_admin' data.id %}">
+                        <button type="button" class="btn btn-danger ">Delete</button>
+                    </a>
+                </div>
+            </td>
+        </tr>
+        {%endfor%}
+        </tbody>
+    </table>
+</div>
+{%endblock%}

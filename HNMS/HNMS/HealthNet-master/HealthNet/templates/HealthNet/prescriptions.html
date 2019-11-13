@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'HAccelerator/mainPages.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'HAccelerator/animate.css' %}" />
+<link rel='shortcut icon' href="{% static 'HAccelerator/images/favicon.ico' %}" type='images/favicon' />
+
+<head>
+
+	<title>HealthNet | Prescriptions</title>
+
+
+
+
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+      width: 100%;
+
+  }
+  </style>
+
+
+</head>
+<body>
+
+<ul class="nav">
+	<li class="nav_container"><a class="nav_items" href="{% url 'HealthNet:home' %}">Home</a></li>
+	<li class="nav_container"><a class="nav_items" href="{% url 'HealthNet:information' %}">User Information</a></li>
+	<li class="nav_container"><a class="nav_items" href="{% url 'HealthNet:appointments' %}">Manage Appointments</a></li>
+    <li class="nav_container"><a class="nav_item_active" href="{% url 'HealthNet:prescriptions' %}">Prescriptions</a></li>
+	<li class="nav_container"><a class="nav_items" href="{% url 'HealthNet:about' %}">About</a></li>
+	<li class="nav_container"><a class="nav_items" href="{% url 'HealthNet:messages' %}">Messages</a></li>
+	<li style="float:right" class="nav_container"><a class="nav_items" href="{% url 'HealthNet:logOut' %}">Log Out</a></li>
+</ul>
+
+<body style="background-color:lightblue">
+
+
+
+ <style>
+
+.carousel-inner img {
+    width: 100%;
+    height: 500px;
+}  </style>
+
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'HAccelerator/images/health.jpg' %}"style="width=100%; height=500px;background-size:cover;" alt="Hi!"  />
+      <div class="carousel-caption">
+        <h3>Growth and Health</h3>
+        <!--<p>We had such a great time in LA!</p>-->
+      </div>
+    </div>
+    <div class="carousel-item">
+     <img   src="{% static 'HAccelerator/images/health7.jpg' %}" ; style="width=100%; height=500px;background-size:cover;" alt="Hi!"  />
+      <div class="carousel-caption">
+        <h3>Services and Requirements</h3>
+        <!--<p>Thank you, Chicago!</p>-->
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'HAccelerator/images/health6.jpg' %}"; style="width=100%; height=500px;background-size:cover;" alt="Hi!" />
+      <div class="carousel-caption">
+        <h3>Developement and Precaution</h3>
+        <!--<p></p>-->
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+ <br>
+ <br>
+
+
+
+
+
+    <div id="container">
+        <div id="tablecontainer">
+            {% if type == "Patient" %}
+                <h1 class="animated flip" ><span style="text-decoration: underline;">{{ patient.firstName }} {{ patient.lastName }}</span>, These are the prescriptions that have been assigned to you</h1>
+            {% elif type == "Doctor" %}
+                <h1 class="animated flip" ><span style="text-decoration: underline;">{{ employee.firstName }} {{ employee.lastName }}</span>, These are the prescriptions that you have created</h1>
+            {% else %}
+                <h1 class="animated flip" ><span style="text-decoration: underline;">{{ employee.firstName }} {{ employee.lastName }}</span>, These are the prescriptions for patients at <span style="text-decoration: underline;">{{ employee.workplace.name }}</span></h1>
+            {% endif %}
+            {% if prescriptions %}
+	            <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Dosage</th>
+                        {% if type == "Patient"%}
+
+                        {% else %}
+                            <th>Patient</th>
+                        {% endif %}
+
+                        {% if type == "Doctor"%}
+                            <th></th>
+                        {% else %}
+                            <th>Doctor</th>
+                        {% endif %}
+                    </tr>
+                    {% for p in prescriptions %}
+                        <tr>
+                            {% if type == "Doctor"%}
+                                <td><a href="{% url 'HealthNet:updatePres' p.id %}">{{ p.name }}</a></td>
+                            {% else %}
+                                <td>{{ p.name }}</td>
+                            {% endif %}
+
+                            <td>{{ p.dosage }}</td>
+
+                            {% if type == "Patient"%}
+
+                            {% else %}
+                                <td>{{ p.patient }}</td>
+                            {% endif %}
+
+                            {% if type == "Doctor"%}
+                                <td><form action="{% url 'HealthNet:removePres' p.id %}"><input type="submit" value="Remove" /></form></td>
+                            {% else %}
+                                <td>{{ p.doctor }}</td>
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                </table>
+            {% else %}
+                <p class="animated shake">There are no prescriptions to view</p>
+            {% endif %}
+
+            {% if type == "Doctor" %}
+                <h1 class="animated shake" >These are the prescriptions for patients at <span style="text-decoration: underline;">{{ employee.workplace.name }}</span></h1>
+                {% if presatw %}
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Dosage</th>
+                            <th>Patient</th>
+                            <th></th>
+                        </tr>
+                        {% for p in presatw %}
+                            <tr>
+                                <td><a href="{% url 'HealthNet:updatePres' p.id %}">{{ p.name }}</a></td>
+                                <td>{{ p.dosage }}</td>
+                                <td>{{ p.patient }}</td>
+                                <td><form action="{% url 'HealthNet:removePres' p.id %}"><input type="submit" value="Remove" /></form></td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                {% else %}
+                    <p  class="animated shake" >There are no prescriptions to view</p>
+                {% endif %}
+
+                <br>
+
+                <form action="{% url 'HealthNet:createPres' %}">
+                    <input type="submit" value="Create Prescription" />
+                </form>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

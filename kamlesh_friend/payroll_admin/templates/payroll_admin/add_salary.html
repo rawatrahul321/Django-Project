@@ -1,0 +1,315 @@
+{% extends 'payroll_admin/admin_about.html'  %}
+{%load static%}
+<title>{%block title%}Add Salary{%endblock%}</title>
+{%block body%}
+<script src="{% static 'payroll_admin/mycustomjs.js' %}" type="text/javascript"></script>
+<br>
+<br>
+<br>
+<style>
+hr{
+margin-top:3px;
+}
+select{
+width:100%;
+height:37px;
+border-radius:4px;
+border-color:lightgray;
+}
+
+
+
+
+
+
+
+
+
+</style>
+
+<div class="container-fluid" style="background-color:#64677F;height:60px">
+    <div class="col-sm-4">
+        <h3 class="animated bounceInLeft" align="center" style="color:white;hight:40px;padding-top:10px">ADD SALARY</h3>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div align="center">
+
+
+        <div class="card" style="width:900px">
+            <div class="bg-dark text-white card-header">ADD SALARY</div>
+            <div class="card-body">
+                <form id="sign_up" name="myform" method="post">
+                    {%csrf_token%}
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="float:left;">Username</label>
+                                <br>
+                                <select style="float:left;" name="user_name">
+                                    {%for data in emp%}
+                                    <option value="{{data.id}}">{{data.id}}</option>
+                                    {%endfor%}
+
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr>
+
+
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="float:left;">Employee Name</label>
+                                <br>
+
+                                <select style="float:left;" name="emp_name">
+                                    {%for data in data%}
+                                    <option value="{{data.fullname}}">{{data.fullname}}</option>
+                                    {%endfor%}
+
+                                </select>
+
+                            </div>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="float:left;">Month of Pay</label>
+                                <br>
+                                <select style="float:left;" name="mp">
+
+                                    <option value="Jan">Jan</option>
+                                    <option value="Feb">Feb</option>
+                                    <option value="March">March</option>
+                                    <option value="April">April</option>
+                                    <option value="May">May</option>
+                                    <option value="June">June</option>
+                                    <option value="July">July</option>
+                                    <option value="August">August</option>
+                                    <option value="September">September</option>
+                                    <option value="October">October</option>
+                                    <option value="November">November</option>
+                                    <option value="December">December</option>
+
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="float:left;">Total Working Days</label>
+                                <br>
+                                <input id="working_days" name="working_days" class="form-control"
+                                       type="number"
+                                       data-validation="required" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+
+
+                            <div class="form-group">
+                                <label style="float:left;">Basic Salary</label>
+                                <br>
+                                <input id="bs" name="bs" class="form-control"
+                                       type="number" data-validation="required"
+                                       placeholder="">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="float:left;">House Rent Allowence</label>
+                                <br>
+                                <input id="house_rent" name="house_rent" class="form-control"
+                                       type="number"
+                                       data-validation="required" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+
+
+                            <div class="form-group">
+                                <label style="float:left;">Mediclaim</label>
+                                <br>
+                                <input id="mediclaim" name="mediclaim" class="form-control"
+                                       type="number" data-validation="required"
+                                       placeholder="">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="float:left;">Travel Allowence</label>
+                                <br>
+                                <input id="travel" name="travel" class="form-control"
+                                       type="number"
+                                       data-validation="required" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+
+
+                            <div class="form-group">
+                                <label style="float:left;">Dearness Allowence</label>
+                                <br>
+                                <input id="dearness" name="dearness" class="form-control"
+                                       type="number" data-validation="required"
+                                       placeholder="">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="float:left;">Reimbursement</label>
+                                <br>
+                                <input id="reimburement" name="reimburement" class="form-control"
+                                       type="number"
+                                       data-validation="required" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+
+
+                            <div class="form-group">
+                                <label style="float:left;">Conveyance Allowence</label>
+                                <br>
+                                <input id="conveyance" name="conveyance" class="form-control"
+                                       type="number" data-validation="required"
+                                       placeholder="">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="float:left;">Other Salary</label>
+                                <br>
+                                <input id="other_salary" name="other_salary" class="form-control"
+                                       type="number"
+                                       data-validation="required" placeholder="" onfocusout="myFunction2()">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+
+
+                            <div class="form-group">
+                                <label style="float:left;">Year of Salary</label>
+                                <br>
+                                <input id="year_salary" name="year_salary" class="form-control"
+                                       type="number" data-validation="required"
+                                       placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+
+
+                    <p style="float:left"><b>Salary Deduction</b></p>
+                    <br>
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="float:left;">Provident Fund Deduction</label>
+                                <br>
+                                <input id="provident_fund" name="provident_fund" class="form-control"
+                                       type="number"
+                                       data-validation="required" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+
+
+                            <div class="form-group">
+                                <label style="float:left;">Total Tax Deduction</label>
+                                <br>
+                                <input id="total_tax" name="total_tax" class="form-control"
+                                       type="number" data-validation="required"
+                                       onfocusout="myFunction()"
+                                       placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+
+
+                    <p style="float:left"><b>Total Pay and Deduction</b></p>
+                    <br>
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label style="float:left;">Total Deduction</label>
+                                <br>
+                                <input id="total_deduction" name="total_deduction" class="form-control"
+                                       type="number"
+                                       data-validation="required" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+
+
+                            <div class="form-group">
+                                <label style="float:left;">Total Salary</label>
+                                <br>
+                                <input id="total_salary" name="total_salary" class="form-control"
+                                       type="number" data-validation="required"
+                                       placeholder="">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <br>
+
+
+                    <button id="submit" type="submit" value="submit" class="btn btn-dark">Submit</button>
+                    {% if messages %}
+
+                    {% for message in messages %}
+                    <div class="alert alert-warning alert-dismissible {{ message.tags }}">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>{{message}}</strong>
+                    </div>
+                    {%endfor%}
+
+
+                    {% endif %}
+
+                </form>
+
+
+            </div>
+            <div class="bg-dark text-white card-footer">
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+{%endblock%}

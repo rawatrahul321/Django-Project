@@ -1,0 +1,49 @@
+{% extends 'employee/emp.html'%}
+{%load static%}
+{% block body%}
+
+<div class="container-fluid" style="background-color:#64677F;height:60px">
+    <div class="col-sm-4">
+        <h3 class="animated bounceInLeft" align="center" style="color:white;hight:40px;padding-top:10px">About</h3>
+
+
+    </div>
+</div>
+
+<div class="container" style="padding-top:90px">
+    <div class="row">
+
+        <div class="col-sm-6" style="padding-left:40px">
+            <img class="rounded-circle animated bounceInLeft" style="float:right;"
+                 src="{% static 'homepage/images/about_logo.jpg' %}"
+                 width="500" height="400px">
+
+
+        </div>
+        <div class="col-sm-6">
+
+            <h1 class="animated bounceInRight" style="font-size:25px;color:gray;" class="Monospace">
+                About Payroll Management System
+            </h1>
+            <hr>
+            <p class="animated bounceInRight" style="font-size:15px;color:#8D88A2">Payroll Management Sysytem is an
+                important activity in any
+                organization. The main objective of this project Pyaroll Manangement Sysytem is to managing employee's
+                information of organization or for a small group. It has to store all the records of every employee
+                within the organization to assign work to person and right salary and perks to their
+                eligible emplooyees .It can also manage employee information efficiently, define the emoluments,
+                deductions,leave, tax etc, generate pay slip, generate
+                and manage the payrolls processes according to the salary structure assigned to the employee, etc. It
+                keeps a track of the employees attendance and so on that basis it generate the monthly salary. </p>
+
+            <img class="animated bounceInRight" style="padding-left:70px;float:left;"
+                 src="{% static 'homepage/images/pic.gif' %}" width="400"
+                 height="250px">
+
+        </div>
+
+    </div>
+</div>
+{%endblock%}
+
+

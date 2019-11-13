@@ -1,0 +1,79 @@
+{% extends 'employee/emp.html'%}
+{%load static%}
+{% block body%}
+
+<div class="container-fluid" style="background-color:#64677F;height:60px">
+    <div class="col-sm-4">
+        <h3 class="animated bounceInLeft" align="center" style="color:white;hight:40px;padding-top:10px">Details</h3>
+    </div>
+</div>
+<br>
+
+{%for data in data%}
+<div class="container">
+    <div align="center">
+
+
+        <div class="card" style="width:900px">
+            <div class="bg-dark text-white card-header" style="text-transform: uppercase;">VIEW DETAILS OF
+                {{data.fullname}}
+            </div>
+            <div class="card-body">
+                <p style="text-transform: uppercase" ;><b>{{data.fullname}}</b></p><br>
+                <img src="{{data.filename.url}}" style="width:90px;height:90px;"><br><br>
+                {%for data in data1%}
+                <p><b>Email:</b>{{data.email}}</p>
+                {%endfor%}
+                <p><b>Mobile No</b>.{{data.mobile}}</p>
+
+                <p><b>Gender:</b>{{data.gender}}</p>
+                <p><b>Date Of Birth:</b>{{data.bday}}</p>
+                <p><b>Address:</b>{{data.add1}}</p>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p><b>Department:</b>{{data.department}}</p>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <p><b>Designation:</b>{{data.designation}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p><b>State:</b>{{data.state}}</p>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <p><b>City:</b>{{data.city}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p><b>Account Number:</b>{{data.account}}</p>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <p><b>PF Account:</b>{{data.pfaccount}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p><b>Bank Name:</b>{{data.bank}}</p>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <p><b>Joining Date:</b>{{data.joining_date}}</p>
+                    </div>
+                </div>
+                <hr>
+                <a href="{% url 'empurl:emp_details' %}"> <img src="{% static 'employee/images/click.png' %}">Click Here
+                    For Update Details</a>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+{%endfor%}
+{%endblock%}

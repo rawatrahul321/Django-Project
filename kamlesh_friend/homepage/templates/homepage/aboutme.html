@@ -1,0 +1,211 @@
+{% load static %}
+<!--<link rel="stylesheet" type="text/css" href="{% static 'homepage/style.css' %}"/>-->
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/animate.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/homepage.css' %}"/>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>About</title>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <a class="navbar-brand" href="{% url 'homepageurl:homepage' %}"> <img class="img-fluid"
+                                                                          src="{% static 'homepage/images/logo.png' %}"
+                                                                          alt="My image"
+                                                                          style="width:20px"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'homepageurl:homepage' %}"><img
+                        src="{% static 'homepage/images/homepage1.png' %}">Home <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'homepageurl:abouturl' %}"><img
+                        src="{% static 'homepage/images/about1.png' %}">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Login
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="{% url 'payrollurl:payroll_login' %}"><img
+                            src="{% static 'homepage/images/login.png' %}">Admin Login</a>
+                    <a class="dropdown-item" href="{% url 'homepageurl:loginme' %}"><img
+                            src="{% static 'homepage/images/login.png' %}">Employee Login</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'homepageurl:contact_me' %}"><img
+                        src="{% static 'homepage/images/contact.png' %}">Contact Us</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#"></a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+    <b><i class="animated hinge" style="color:SlateBlue;font-family:verdana;font-size:120%;"><img class="animated hinge"
+                                                                                                  src="{% static 'homepage/images/logo4.png' %}">Payroll Management System</i></b>
+  </span>
+
+    </div>
+</nav>
+{% block body %}
+<div class="container-fluid" style="background-color:#64677F;height:60px">
+    <div class="col-sm-4">
+        <h3 class="animated bounceInLeft" align="center" style="color:white;hight:40px;padding-top:10px">About</h3>
+
+
+    </div>
+</div>
+
+<div class="container" style="padding-top:90px">
+    <div class="row">
+
+        <div class="col-sm-6" style="padding-left:40px">
+            <img class="rounded-circle animated bounceInLeft" style="float:right;"
+                 src="{% static 'homepage/images/about_logo.jpg' %}"
+                 width="500" height="400px">
+
+
+        </div>
+        <div class="col-sm-6">
+
+            <h1 class="animated bounceInRight" style="font-size:25px;color:gray;" class="Monospace">
+                About Payroll Management System
+            </h1>
+            <hr>
+            <p class="animated bounceInRight" style="font-size:15px;color:#8D88A2">Payroll Management Sysytem is an
+                important activity in any
+                organization. The main objective of this project Pyaroll Manangement Sysytem is to managing employee's
+                information of organization or for a small group. It has to store all the records of every employee
+                within the organization to assign work to person and right salary and perks to their
+                eligible emplooyees .It can also manage employee information efficiently, define the emoluments,
+                deductions,leave, tax etc, generate pay slip, generate
+                and manage the payrolls processes according to the salary structure assigned to the employee, etc. It
+                keeps a track of the employees attendance and so on that basis it generate the monthly salary. </p>
+
+            <img class="animated bounceInRight" style="padding-left:70px;float:left;"
+                 src="{% static 'homepage/images/pic.gif' %}" width="400"
+                 height="250px">
+
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+<hr>
+<footer>
+    <div class="row">
+        <div class="col-sm-6">
+            <<b class="animated bounceInLeft" style="font-size:18px;color:#F2F1F7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONTACT
+            INFO:</b>&nbsp;
+            <p class="animated bounceInLeft" style="font-size:14px;color:#F2F1F7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                    src="{% static 'homepage/images/add1.png' %}">&nbsp;Address:New Ashok Nagar,Delhi</p>
+            <p class="animated bounceInLeft" style="font-size:14px;color:#F2F1F7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                    src="{% static 'homepage/images/city.png' %}">&nbsp;Main City:Delhi</p>
+            <p class="animated bounceInLeft" style="font-size:14px;color:#F2F1F7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                    src="{% static 'homepage/images/mobile.png' %}">&nbsp;Mobile No:9639830975</p>
+            <p class="animated bounceInLeft" style="font-size:14px;color:#F2F1F7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                    src="{% static 'homepage/images/phon.png' %}">&nbsp;Phon No:0122-2362458</p>
+            <p class="animated bounceInLeft" style="font-size:14px;color:#F2F1F7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                    src="{% static 'homepage/images/email3.png' %}">&nbsp;Email: <a style="color:white"
+                                                                                    href="mailto:deegariya007@gmail.com">deegariya007@gmail.com</a>
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <div id="map" style="width:200pxheight:250pxpx"></div>
+
+            <script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var myCenter = new google.maps.LatLng(28.5911307,77.3078392);
+  var mapOptions = {center: myCenter, zoom: 5};
+  var map = new google.maps.Map(mapCanvas,mapOptions);
+  var marker = new google.maps.Marker({
+    position: myCenter,
+    animation: google.maps.Animation.BOUNCE
+  });
+  marker.setMap(map);
+}
+
+
+
+
+
+
+
+            </script>
+
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8PG7PfjhaZVR6EEbEy4c95CHOdNTmjw4&callback=myMap"></script>
+        </div>
+    </div>
+
+</footer>
+<footer style="background-color:black">
+    <div class="row">
+
+
+        <div class="col-sm-3">
+            <p style="color:white;font-size:12px;padding-top:5px;padding-left:5px;">Major Project:MCA © 2018 All Rights
+                Reserved.
+
+            </p>
+        </div>
+        <div class="col-sm-3">
+            <ul style="list-style-type:none">
+                <li style="float:left;padding-top:7px">
+                    <p style="color:white;font-size:12px">Follow me on:</p>
+                </li>
+                <li style="float:left">
+                    <a href="https://www.facebook.com/deepak.gariya"> <img src="{% static 'homepage/images/fb1.png' %}"
+                                                                           style="hight:27px;width:27px;padding-top:5px;padding-left:5px"></a>
+
+                </li>
+                <li style="float:left">
+                    <a href="https://twitter.com/Deepakgariya1"> <img src="{% static 'homepage/images/twitter.png' %}"
+                                                                      style="hight:27px;width:27px;padding-top:5px;padding-left:5px"></a>
+
+                </li>
+                <li style="float:left">
+                    <a href="https://www.linkedin.com/in/deepak-gariya-3ab5b495
+"><img src="{% static 'homepage/images/linkedin.png' %}"
+       style="hight:27px;width:27px;padding-top:5px;padding-left:5px"></a>
+
+                </li>
+
+
+            </ul>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>

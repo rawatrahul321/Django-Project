@@ -1,0 +1,69 @@
+{% extends 'payroll_admin/admin_about.html'  %}
+{%load static%}
+<title>{%block title%}ADD DEPARTMENT{%endblock%}</title>
+{%block body%}
+<br>
+<br>
+<br>
+
+<div class="container-fluid" style="background-color:#64677F;height:60px">
+    <div class="col-sm-4">
+        <h3 class="animated bounceInLeft" align="center" style="color:white;hight:40px;padding-top:10px">Add
+            Department</h3>
+    </div>
+</div>
+
+<br>
+<br>
+<div class="container">
+    <div align="center">
+
+        <div class="card" style="width:700px">
+            <div class="bg-dark text-white card-header">Add Department</div>
+            <div class="card-body">
+                <form name="add_department_form" method="POST">
+                    {%csrf_token%}
+
+                    <div class="form-group">
+                        <label style="float:left;">Add Department Name</label>
+                        <br>
+
+                        <input id="add_department" name="add_department" class="form-control" type="text"
+                               data-validation="required" placeholder="Department">
+                    </div>
+                    <div class="form-group">
+                        <label style="float:left;">Prescription and Description</label>
+                        <br>
+                        <textarea class="form-control" type="textarea" name="description" id="description"
+                                  placeholder="Description(max:250 words)"
+                                  maxlength="250"
+                                  rows="7"></textarea>
+                    </div>
+                    <button id="submit" type="submit" value="submit" onclick="validate()" class="btn btn-dark">Submit
+                    </button>
+
+
+                </form>
+                {% if messages %}
+
+                {% for message in messages %}
+                <div class="alert alert-warning alert-dismissible {{ message.tags }}">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>{{message}}</strong>
+                </div>
+                {%endfor%}
+
+
+                {% endif %}
+
+
+            </div>
+            <div class="bg-dark text-white card-footer"></div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+
+{%endblock%}

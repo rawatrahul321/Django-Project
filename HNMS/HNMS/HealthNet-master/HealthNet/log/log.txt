@@ -1,0 +1,167 @@
+User rahul registered a new account - logged on: 05/03/18 @ 10:21:09
+User rahul created an appointment @ Hospital 2 on 01.25.2018,10:30 AM - logged on: 05/03/18 @ 10:22:14
+Patient rahul sent a message to doctor1 - logged on: 05/03/18 @ 10:22:51
+User rahul logged out - logged on: 05/03/18 @ 10:23:05
+User ashish registered a new account - logged on: 05/03/18 @ 10:32:14
+User ashish created an appointment @ Hospital 1 on 02.06.2019,10:00 AM - logged on: 05/03/18 @ 10:33:38
+Patient ashish sent a message to doctor2 - logged on: 05/03/18 @ 10:36:31
+User ashish exported their information - logged on: 05/03/18 @ 10:37:42
+User ashish exported their information - logged on: 05/03/18 @ 10:37:59
+User ashish logged out - logged on: 05/03/18 @ 10:39:33
+User ashish logged in - logged on: 05/03/18 @ 10:40:07
+User ashish logged out - logged on: 05/03/18 @ 10:40:57
+User ashish logged in - logged on: 05/03/18 @ 10:44:40
+User ashish logged out - logged on: 05/03/18 @ 10:49:55
+User ashish changed their password - logged on: 05/03/18 @ 10:51:05
+User ashish logged in - logged on: 05/03/18 @ 10:51:30
+User ashish logged out - logged on: 05/03/18 @ 10:51:35
+User ashish logged in - logged on: 05/03/18 @ 12:32:22
+User ashish logged in - logged on: 05/03/18 @ 13:05:01
+User ashish cancelled Appointment #2 - logged on: 05/03/18 @ 13:06:41
+User ashish created an appointment @ Hospital 1 on 02.25.2018,10:00 AM - logged on: 05/03/18 @ 13:07:43
+User ashish logged in - logged on: 05/03/18 @ 14:05:39
+User ashish logged in - logged on: 05/03/18 @ 15:49:16
+User ashish logged in - logged on: 05/03/18 @ 15:51:25
+User ashish logged in - logged on: 05/04/18 @ 13:12:00
+User ashish logged out - logged on: 05/04/18 @ 13:13:07
+User ashish logged in - logged on: 05/04/18 @ 13:22:54
+Patient ashish sent a message to doctor2 - logged on: 05/04/18 @ 13:27:38
+User ashish logged out - logged on: 05/04/18 @ 13:30:02
+User ashish logged in - logged on: 05/04/18 @ 18:27:41
+User ashish logged out - logged on: 05/04/18 @ 18:55:48
+User ashish logged in - logged on: 05/04/18 @ 19:17:29
+User ashish logged out - logged on: 05/04/18 @ 20:04:53
+User deepak verma registered a new account - logged on: 05/04/18 @ 21:18:14
+User deepak verma exported their information - logged on: 05/04/18 @ 21:19:12
+User deepak verma created an appointment @ Hospital 1 on 02.08.2017,09:30 PM - logged on: 05/04/18 @ 21:22:27
+User deepak verma logged out - logged on: 05/04/18 @ 21:25:13
+User ashish logged in - logged on: 05/05/18 @ 02:11:49
+User ashish logged out - logged on: 05/05/18 @ 02:17:41
+User ashish logged in - logged on: 05/05/18 @ 12:50:04
+User ashish logged out - logged on: 05/05/18 @ 12:59:26
+User ashish logged in - logged on: 05/05/18 @ 14:13:03
+Patient ashish sent a message to ashish - logged on: 05/05/18 @ 15:22:24
+User ashish logged out - logged on: 05/05/18 @ 15:25:55
+User ashish logged in - logged on: 05/05/18 @ 15:30:41
+User ashish logged out - logged on: 05/05/18 @ 16:42:12
+User vivek mehra registered a new account - logged on: 05/05/18 @ 18:30:38
+User vivek mehra created an appointment @ Hospital 2 on 06.12.2016,07:30 AM - logged on: 05/05/18 @ 18:32:07
+Patient vivek mehra sent a message to vivek mehra - logged on: 05/05/18 @ 18:34:08
+Patient vivek mehra sent a message to vivek mehra - logged on: 05/05/18 @ 18:55:21
+Patient vivek mehra sent a message to vivek mehra - logged on: 05/05/18 @ 18:55:39
+Patient vivek mehra sent a message to vivek mehra - logged on: 05/05/18 @ 18:56:15
+User vivek mehra logged out - logged on: 05/05/18 @ 18:58:44
+User  logged out - logged on: 05/05/18 @ 19:03:35
+User vivek mehra logged in - logged on: 05/05/18 @ 19:04:44
+vivek mehra deleted message# 5 - logged on: 05/05/18 @ 19:05:42
+vivek mehra deleted message# 8 - logged on: 05/05/18 @ 19:05:51
+vivek mehra deleted message# 5 - logged on: 05/05/18 @ 19:05:53
+vivek mehra deleted message# 6 - logged on: 05/05/18 @ 19:05:57
+vivek mehra deleted message# 5 - logged on: 05/05/18 @ 19:06:02
+vivek mehra deleted message# 6 - logged on: 05/05/18 @ 19:09:44
+vivek mehra deleted message# 7 - logged on: 05/05/18 @ 19:09:47
+Patient vivek mehra sent a message to doctor1 - logged on: 05/05/18 @ 19:19:35
+vivek mehra deleted message# 6 - logged on: 05/05/18 @ 19:19:43
+User vivek mehra exported their information - logged on: 05/05/18 @ 19:20:33
+User vivek mehra logged out - logged on: 05/05/18 @ 19:21:14
+User ashish logged in - logged on: 05/05/18 @ 19:21:58
+User ashish logged out - logged on: 05/05/18 @ 19:26:04
+User vivek mehra logged in - logged on: 05/05/18 @ 19:27:03
+User vivek mehra logged out - logged on: 05/05/18 @ 20:17:15
+User ashish logged in - logged on: 05/05/18 @ 22:57:23
+User ashish logged out - logged on: 05/05/18 @ 23:17:28
+User ROBERT BHATIA registered a new account - logged on: 05/05/18 @ 23:32:55
+User ROBERT BHATIA created an appointment @ Hospital 2 on 05.23.2019,09:30 PM - logged on: 05/05/18 @ 23:36:09
+Patient ROBERT BHATIA sent a message to doctor2 - logged on: 05/05/18 @ 23:39:00
+Patient ROBERT BHATIA sent a message to ROBERT BHATIA - logged on: 05/05/18 @ 23:41:00
+User ROBERT BHATIA created an appointment @ Hospital 1 on 02.23.2019,07:30 PM - logged on: 05/05/18 @ 23:53:31
+User ROBERT BHATIA cancelled Appointment #6 - logged on: 05/05/18 @ 23:53:34
+User ashish logged in - logged on: 05/06/18 @ 10:42:25
+User ashish logged out - logged on: 05/06/18 @ 10:43:39
+User  logged out - logged on: 05/06/18 @ 10:43:56
+User ashish logged in - logged on: 05/06/18 @ 10:44:18
+User ashish exported their information - logged on: 05/06/18 @ 11:25:07
+Patient ashish sent a message to admin2 - logged on: 05/06/18 @ 11:29:30
+ashish deleted message# 4 - logged on: 05/06/18 @ 11:29:42
+User  logged out - logged on: 05/06/18 @ 11:47:49
+User ashish logged in - logged on: 05/06/18 @ 11:49:01
+User ashish logged out - logged on: 05/06/18 @ 12:31:02
+User ashish logged in - logged on: 05/06/18 @ 13:31:31
+User ashish logged out - logged on: 05/06/18 @ 13:33:39
+User ashish logged in - logged on: 05/06/18 @ 14:08:57
+ashish deleted message# 3 - logged on: 05/06/18 @ 14:22:05
+User ashish logged out - logged on: 05/06/18 @ 16:54:11
+User rahul logged in - logged on: 05/06/18 @ 17:05:24
+User rahul logged out - logged on: 05/06/18 @ 17:07:04
+User admin1 logged in - logged on: 05/06/18 @ 17:09:16
+User admin1 logged out - logged on: 05/06/18 @ 17:11:19
+User doctor1 logged in - logged on: 05/06/18 @ 17:12:27
+User doctor1 logged out - logged on: 05/06/18 @ 17:17:57
+User doctor1 logged in - logged on: 05/06/18 @ 17:20:18
+User doctor1 updated Appointment #3 - logged on: 05/06/18 @ 17:41:20
+User doctor1 created an appointment @ Hospital 1 on 02.21.2018,10:00 AM - logged on: 05/06/18 @ 17:44:31
+Doctor doctor1 removed Prescription #2 - logged on: 05/06/18 @ 18:11:46
+User doctor1 logged out - logged on: 05/06/18 @ 18:13:39
+User admin1 logged in - logged on: 05/06/18 @ 18:13:59
+User admin1 logged out - logged on: 05/06/18 @ 18:21:48
+User doctor1 logged in - logged on: 05/06/18 @ 18:22:30
+User doctor1 logged out - logged on: 05/06/18 @ 18:25:35
+User rahul logged in - logged on: 05/06/18 @ 18:36:51
+User rahul logged out - logged on: 05/06/18 @ 18:39:50
+User ashish logged in - logged on: 05/06/18 @ 18:45:18
+User ashish logged out - logged on: 05/06/18 @ 18:55:18
+User ashish logged in - logged on: 05/06/18 @ 18:59:05
+User ashish logged out - logged on: 05/06/18 @ 22:58:29
+User admin1 logged in - logged on: 05/06/18 @ 22:59:33
+User admin1 logged out - logged on: 05/06/18 @ 23:01:47
+User doctor1 logged in - logged on: 05/06/18 @ 23:02:09
+User doctor1 logged out - logged on: 05/06/18 @ 23:06:20
+User ashish logged in - logged on: 05/06/18 @ 23:07:31
+User ashish logged out - logged on: 05/06/18 @ 23:08:51
+User admin1 logged in - logged on: 05/06/18 @ 23:09:33
+User admin1 logged out - logged on: 05/06/18 @ 23:09:38
+User admin1 logged in - logged on: 05/06/18 @ 23:09:56
+User ashish logged in - logged on: 05/06/18 @ 23:11:55
+User ashish logged out - logged on: 05/06/18 @ 23:14:11
+User rahul logged in - logged on: 05/07/18 @ 11:35:26
+User rahul logged out - logged on: 05/07/18 @ 11:36:55
+User doctor1 logged in - logged on: 05/07/18 @ 11:37:14
+User doctor1 logged out - logged on: 05/07/18 @ 11:38:45
+User rahul logged in - logged on: 05/07/18 @ 11:39:18
+User rahul logged out - logged on: 05/07/18 @ 11:40:25
+User admin1 logged in - logged on: 05/07/18 @ 11:42:38
+User admin1 logged out - logged on: 05/07/18 @ 11:44:32
+User ashish logged in - logged on: 05/08/18 @ 10:16:12
+User ashish created an appointment @ Hospital 2 on 02.25.2019,09:00 AM - logged on: 05/08/18 @ 10:32:11
+User ashish created an appointment @ Hospital 2 on 03.12.2018,06:30 PM - logged on: 05/08/18 @ 10:32:41
+User ashish created an appointment @ Hospital 1 on 02.25.2018,09:00 PM - logged on: 05/08/18 @ 10:33:01
+User ashish created an appointment @ Hospital 2 on 02.02.2016,07:00 AM - logged on: 05/08/18 @ 10:33:22
+User ashish created an appointment @ Hospital 2 on 04.25.2017,06:00 PM - logged on: 05/08/18 @ 10:33:41
+Patient ashish sent a message to doctor2 - logged on: 05/08/18 @ 10:43:54
+User ashish logged out - logged on: 05/08/18 @ 10:46:00
+User doctor1 logged in - logged on: 05/08/18 @ 10:47:25
+User doctor1 logged out - logged on: 05/08/18 @ 10:56:40
+User rahul logged in - logged on: 05/08/18 @ 10:57:37
+User admin1 logged in - logged on: 05/08/18 @ 10:58:17
+User admin1 logged out - logged on: 05/08/18 @ 10:59:23
+User admin1 logged in - logged on: 05/08/18 @ 11:00:15
+Administrator admin1 sent a message to doctor1 - logged on: 05/08/18 @ 11:02:19
+User admin1 logged out - logged on: 05/08/18 @ 11:02:50
+User rahul logged in - logged on: 05/08/18 @ 11:03:08
+Patient rahul sent a message to admin1 - logged on: 05/08/18 @ 11:04:04
+User rahul logged out - logged on: 05/08/18 @ 11:04:09
+User admin1 logged in - logged on: 05/08/18 @ 11:04:31
+User admin1 logged out - logged on: 05/08/18 @ 11:07:08
+User rahul logged in - logged on: 05/08/18 @ 11:07:42
+User rahul logged out - logged on: 05/08/18 @ 11:08:23
+User rahul logged in - logged on: 05/10/18 @ 09:41:30
+User ashish logged in - logged on: 05/10/18 @ 10:08:20
+User ashish logged in - logged on: 05/10/18 @ 10:13:10
+User rahul logged in - logged on: 05/10/18 @ 12:01:19
+User rahul logged in - logged on: 05/10/18 @ 12:06:50
+User rahul logged out - logged on: 05/10/18 @ 12:08:01
+User admin1 logged in - logged on: 05/23/18 @ 16:49:06
+User admin1 logged in - logged on: 05/24/18 @ 14:26:16
+User admin1 logged out - logged on: 05/24/18 @ 14:27:19
+User admin1 logged in - logged on: 05/24/18 @ 14:27:54
+User admin1 logged in - logged on: 05/24/18 @ 15:49:08

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'HAccelerator/mainPages.css' %}" />
+<link rel='shortcut icon' href="{% static 'HAccelerator/images/favicon.ico' %}" type='images/favicon' />
+<link rel="stylesheet" type="text/css" href="{% static 'HAccelerator/animate.css' %}" />
+<head>
+	<title>HealthNet | Messages</title>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body{
+
+background-image: url('{% static "HAccelerator/images/hops13.jpeg" %}'); width=100%;
+width:100%;height:100%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+</style>
+</head>
+
+<ul class="nav">
+    {% if type == "Administrator"%}
+		<li class="nav_container"><a class="nav_items" href="{% url 'HealthNet:home' %}">Home</a></li>
+        <li class="nav_container"><a class="nav_items" href="{% url 'HealthNet:log' %}">Activity Log</a></li>
+        <li class="nav_container"><a class="nav_items" href="{% url 'HealthNet:statistics' %}">Statistics</a></li>
+        <li class="nav_container"><a class="nav_items" href="{% url 'HealthNet:registerDN' %}">Staff Registration</a></li>
+		<li class="nav_container"><a class="nav_item_active" href="{% url 'HealthNet:messages' %}">Messages</a></li>
+		<li style="float:right" class="nav_container"><a class="nav_items" href="{% url 'HealthNet:logOut' %}">Log Out</a></li>
+    {% else %}
+		<li class="nav_container"><a class="nav_items" href="{% url 'HealthNet:home' %}">Home</a></li>
+        <li class="nav_container"><a class="nav_items" href="{% url 'HealthNet:information' %}">User Information</a></li>
+        <li class="nav_container"><a class="nav_items" href="{% url 'HealthNet:appointments' %}">Manage Appointments</a></li>
+        <li class="nav_container"><a class="nav_items" href="{% url 'HealthNet:prescriptions' %}">Prescriptions</a></li>
+        <li class="nav_container"><a class="nav_items" href="{% url 'HealthNet:about' %}">About</a></li>
+        <li class="nav_container"><a class="nav_item_active" href="{% url 'HealthNet:messages' %}">Messages</a></li>
+        <li style="float:right" class="nav_container"><a class="nav_items" href="{% url 'HealthNet:logOut' %}">Log Out</a></li>
+	{% endif %}
+</ul>
+
+
+
+<body>
+
+
+
+
+<!--<style>-->
+<!--h2-->
+<!--{-->
+    <!--color:red;-->
+    <!--background-color:black;-->
+    <!--}-->
+
+    <!---->
+<!--</sytle>-->
+    <div id="container">
+        <div id="tablecontainer">
+            <h2 class="animated shake" style="color:blue; background-color:rgba(0,0,0,4);display:inline-block";> Inbox</h2>
+            {% if messages %}
+	            <table>
+                    <tr>
+                        <th>Sender Username</th>
+						<th>Sender Type</th>
+						<th>Date Sent</th>
+                        <th>Subject</th>
+						<th></th>
+                    </tr>
+                    {% for m in messages %}
+                        <tr>
+                            <td>{{ m.senderName }}</td>
+							<td>{{ m.senderType }}</td>
+                            <td>{{ m.date }}</td>
+                            <td>{{ m.subjectLine }}</td>
+                            <td><form action="{% url 'HealthNet:viewMess' m.id %}"><input type="submit" value="View" /></form></td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            {% else %}
+                <p class="animated shake">There are no messages to view</p>
+            {% endif %}
+
+            <br>
+
+			<h2 class="animated shake" style="color:blue; background-color:rgba(0,0,0,4);display:inline-block;">Sent Messages</h2>
+            {% if sendMessages %}
+	            <table>
+                    <tr>
+                        <th>To</th>
+						<th>Date Sent</th>
+                        <th>Subject</th>
+						<th></th>
+                    </tr>
+                    {% for m in sendMessages %}
+
+                        <tr>
+                            <td>{{ m.receiverName }}</td>
+                            <td>{{ m.date }}</td>
+                            <td>{{ m.subjectLine }}</td>
+                            <td><form action="{% url 'HealthNet:viewMess' m.id %}"><input type="submit" value="View" /></form></td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            {% else %}
+                <p  class="animated shake">You have sent no messages</p>
+            {% endif %}
+
+            <br>
+
+            <form action="{% url 'HealthNet:createMess' %}">
+                <input class="animated flip" type="submit" value="Create Message" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>

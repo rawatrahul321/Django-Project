@@ -1,0 +1,85 @@
+{% extends 'payroll_admin/admin_about.html'%}
+{%load static%}
+
+{% block body%}
+<br>
+<br>
+<br>
+<div class="container">
+    <div align="center">
+        {%for e in sal%}
+        {%for s in admin%}
+
+
+        <div class="card" style="width:900px">
+            <div class="bg-dark text-white card-header" style="text-transform: uppercase;">SALARY DETAILS OF
+                {{e.fullname}}
+
+            </div>
+
+
+            <div class="card-body">
+                <h4 style="color:lightgray">Payslip For The Period Of {{s.mp}} {{s.year_salary}}</h4>
+                <hr>
+                <br>
+                <div class="row" align="left">
+                    <div class="col-sm-6">
+                        <p><b> Id:</b>&nbsp&nbsp&nbsp&nbsp&nbsp{{e.user_name_id}}</p>
+                        <p><b>Department:</b>&nbsp&nbsp&nbsp&nbsp&nbsp{{e.department}}</p>
+                        <p><b>Designation:</b>&nbsp&nbsp&nbsp&nbsp&nbsp{{e.designation}}</p>
+                        <p><b>Days Of Working</b>:&nbsp&nbsp&nbsp&nbsp&nbsp{{s.working_days}}</p>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <p><b>Employee Name:</b>&nbsp&nbsp&nbsp&nbsp&nbsp{{e.fullname}}</p>
+                        <p><b>Pf Account No:</b>&nbsp&nbsp&nbsp&nbsp&nbsp{{e.pfaccount}}</p>
+                        <p><b>Account No:</b>&nbsp&nbsp&nbsp&nbsp&nbsp{{e.account}}</p>
+                        <p><b>Days Of Joining</b>:&nbsp&nbsp&nbsp&nbsp&nbsp{{e.joining_date}}</p>
+
+                    </div>
+                </div>
+                <br>
+                <div class="bg-light text-black card-header" style="text-transform: uppercase;">SALARY AND DEDUCTION
+                    DETAILS
+
+
+                </div>
+                <div class="row" align="left">
+                    <div class="col-sm-6">
+                        <p><b>Basic Salary:</b>&nbsp&nbsp&nbsp&nbsp&nbsp{{s.bs}}</p>
+                        <p><b>Dearness Allowance:</b>&nbsp&nbsp&nbsp&nbsp&nbsp{{s.dearness}}</p>
+                        <p><b>Medical Allowance:</b>&nbsp&nbsp&nbsp&nbsp&nbsp{{s.mediclaim}}</p>
+                        <p><b>House Rent Allowance:</b>&nbsp&nbsp&nbsp&nbsp&nbsp{{s.house_rent}}</p>
+                        <p><b>Conveyance Allowance:</b>&nbsp&nbsp&nbsp&nbsp&nbsp{{s.conveyance}}</p>
+                        <p><b>Reimbursement:</b>&nbsp&nbsp&nbsp&nbsp&nbsp{{s.reimburement}}</p>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <p><b>Provident Fund:</b>&nbsp&nbsp&nbsp&nbsp&nbsp{{s.provident_fund}}</p>
+                        <p><b>Tax:</b>&nbsp&nbsp&nbsp&nbsp&nbsp{{s.total_tax}}</p>
+
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="bg-light text-black card-header" style="text-transform: uppercase;"><p><b>Total
+                            Salary:</b>{{s.total_salary}}&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="bg-light text-black card-header" style="text-transform: uppercase;">
+                            <p><b>Total Deduction:</b>{{s.total_deduction}}&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        {%endfor%}
+        {%endfor%}
+    </div>
+</div>
+{%endblock%}
